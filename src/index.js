@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {RoomProvider} from './Context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <RoomProvider>
+      <Router>
+        <App />
+      </Router>
+    </RoomProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
